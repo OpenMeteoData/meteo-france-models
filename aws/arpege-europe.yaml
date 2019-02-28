@@ -1,0 +1,30 @@
+Name: ARPEGE Europe
+Description: |
+  ARPEGE Europe is a weather forecast model produced by Météo-France. Dozens of atmospheric variables are available through this datase: temperatures, winds, precipitation... Europe and North-Africa are covered by ARPEGE Europe at a base horizontal resolution of 0.1° (~11km) between grid points, it predicts weather out up to 114 hours in the future.
+
+  Our work is based on open-data from Météo-France, but we are not affiliated or endorsed by Météo-France.
+Documentation: https://openmeteodata.com/en/meteo-france-models
+Contact: data@openmeteodata.com
+ManagedBy: "[OpenMeteoData SAS](https://openmeteodata.com)"
+UpdateFrequency: Every 6 hours
+Tags:
+  - aws-pds
+  - climate
+  - disaster response
+  - earth observation
+  - environmental
+  - machine learning
+  - meteorological
+  - model
+  - weather
+License: https://openmeteodata.com/en/meteo-france-models/open-licence
+Resources:
+  - Description:
+    ARN:
+    Region:
+    Type:
+DataAtWork:
+  - Title:
+    URL:
+    AuthorName:
+    AuthorURL:
