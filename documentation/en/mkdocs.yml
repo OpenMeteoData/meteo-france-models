@@ -9,6 +9,8 @@ copyright: >
   <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
   <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France.</p>
 
+site_dir: ../../www/doc
+
 theme:
   name: 'material'
 
