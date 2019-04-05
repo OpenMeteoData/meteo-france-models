@@ -2,7 +2,7 @@
 
 Welcome to the **Météo-France models on AWS** project.
 
-This project is brought to you by [OpenMeteoData SAS](https://openmeteodata.com) and [AWS Public Dataset Program](https://aws.amazon.com/opendata/public-datasets/).
+This project is brought to you by [OpenMeteoData](https://openmeteodata.com) and [AWS Public Dataset Program](https://aws.amazon.com/opendata/public-datasets/).
 
 **We serve Météo-France models data from high-performance and reliable [AWS S3](https://aws.amazon.com/s3/) hosting service.**
 
@@ -10,13 +10,14 @@ This project is brought to you by [OpenMeteoData SAS](https://openmeteodata.com)
 
 | Id | Name | Coverage | Grid | Doc |
 | -- | ---- | -------- | ---------- | --- |
-| `arome-france-hd` | AROME | France + neighborhood | 0.01° (~1.5km) | [🔗 ](models/arome-france-hd.md)
 | `arome-france` | AROME | France + neighborhood | 0.025° (~2.5km) | [🔗 ](models/arome-france.md)
+| `arome-france-hd` | AROME | France + neighborhood | 0.01° (~1.5km) | [🔗 ](models/arome-france-hd.md)
 | `arpege-europe` | ARPEGE | Europe | 0.1° (~11km) | [🔗 ](models/arpege-europe.md)
 | `arpege-world` | ARPEGE | Global | 0.5° (~55km) | [🔗 ](models/arpege-world.md)
 
-
 ## Available datasets
+
+### 📂 [Browse the datasets](/)
 
 ### **Cloud-ready − v2**
 
@@ -55,9 +56,9 @@ That is why we developped this service enabling easy access to MF models data.
 
 ## Licence
 
-**Both original and new data is Licensed under [French Government Open Licence](https://github.com/etalab/licence-ouverte/blob/master/open-licence.md)**
+**Both original and new data are Licensed under [French Government Open Licence](license.md)**
 
-Our work is based on open-data from Météo-France, but we are not affiliated or endorsed by Météo-France.
+Our work is based on open-data from Météo-France, but we are not affiliated or endorsed by Météo-France by any way.
 
 ## Updates notifications
 
@@ -74,13 +75,12 @@ We aim to provide a service with industry-grade reliability.
 
 **HOWEVER THIS SERVICE IS PROVIDED ON A BEST EFFORT BASIS WITHOUT ANY WARANTEE. IT MAY BE SUBJECT TO OUTAGES WITHOUT PRIOR NOTIFICATION.**
 
-Our systems are fully monitored with immediate email and SMS alert in case of a problem, and we have several people with full access to the infrastructure if something needs to be fixed urgently.
-The watch team includes Nicolas Baldeck (OpenMeteoData), Vaclav Hornik (Windguru), Christian Quest.
+Our systems are fully monitored with immediate email and SMS alert in case of a problem.
 
 We are still dependent on Meteo-France servers. So if Meteo-France servers go down, there is nothing we can do. However, you will also face this problem if you download the data directly from Meteo-France servers.
 
-**On request, we can provide commercial SLA** (including access to premium Meteo-France servers). Pricing starts at €500 / month. Contact sales@openmeteodata.com for more informations.
+**On request, we can provide commercial SLA** (including access to premium Meteo-France servers). Pricing starts at €500 / month. Email contact@openmeteodata.com for more informations.
 
 ## Contact
 
-data@openmeteodata.com
+contact@openmeteodata.com

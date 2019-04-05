@@ -2,14 +2,15 @@
 
 ![](../img/domain-arpege-europe.jpg)
 
-TODO: url to bucket
+## 📂 [Browse arpege-europe dataset](/#arpege-europe/)
 
 ## Coverage
 Europe at 0.1° (~11km) resolution
 
 ## Static files
 
-TODO
+* [Model terrain height](https://mf-nwp-models.s3.amazonaws.com/arpege-europe/static/terrain.grib2)
+* [Landmask](https://mf-nwp-models.s3.amazonaws.com/arpege-europe/static/landmask.grib2)
 
 ## Timesteps
 

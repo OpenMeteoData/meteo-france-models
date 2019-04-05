@@ -2,14 +2,15 @@
 
 ![](../img/domain-arpege-world.jpg)
 
-TODO: url to bucket
+## 📂 [Browse arpege-world dataset](/#arpege-world/)
 
 ## Coverage
 Global at 0.5° (~55km) resolution
 
 ## Static files
 
-TODO
+* [Model terrain height](https://mf-nwp-models.s3.amazonaws.com/arpege-world/static/terrain.grib2)
+* [Landmask](https://mf-nwp-models.s3.amazonaws.com/arpege-world/static/landmask.grib2)
 
 ## Timesteps
 

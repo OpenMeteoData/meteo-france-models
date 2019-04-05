@@ -1,4 +1,4 @@
-site_name: MF models on AWS
+site_name: Météo-France models on AWS
 #site_url:
 repo_url: https://github.com/OpenMeteoData/meteo-france-models
 
@@ -9,7 +9,7 @@ copyright: >
   <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
   <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France.</p>
 
-site_dir: ../../www/doc
+site_dir: ../../public/en/doc
 
 theme:
   name: 'material'
@@ -20,13 +20,14 @@ nav:
     - Cloud-ready − v2: datasets/v2.md
     - Legacy − v1: datasets/v1.md
   - Models:
-    - arome-france-hd: models/arome-france-hd.md
     - arome-france: models/arome-france.md
+    - arome-france-hd: models/arome-france-hd.md
     - arpege-europe: models/arpege-europe.md
     - arpege-world: models/arpege-world.md
   - Parameters:
     - Full list: parameters/index.md
-  - Data licensing: open-licence.md
+  - Data licensing: license.md
+  - Assistance: assistance.md
   - Tools:
     - Partial download: tools/partial-download.md
     - GRIB2 to GeoTIFF: tools/grib-to-geotiff.md

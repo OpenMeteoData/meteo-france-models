@@ -5,8 +5,8 @@ cd "$DIR"
 
 mkdocs build -f documentation/en/mkdocs.yml
 
-cd www && \
+cd public && \
 git add --all && \
 git commit -m "Publishing to gh-pages" && \
-git push upstream gh-pages && \
+git push origin gh-pages && \
 cd ..

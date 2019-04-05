@@ -2,7 +2,7 @@
 
 ![](../img/domain-arome-france.jpg)
 
-TODO: url to bucket
+## 📂 [Browse arome-france dataset](/#arome-france/)
 
 ## Coverage
 
@@ -10,7 +10,8 @@ France + neighborhood at 0.025° (~2.5km) resolution
 
 ## Static files
 
-TODO
+* [Model terrain height](https://mf-nwp-models.s3.amazonaws.com/arome-france/static/terrain.grib2)
+* [Landmask](https://mf-nwp-models.s3.amazonaws.com/arome-france/static/landmask.grib2)
 
 ## Timesteps
 
