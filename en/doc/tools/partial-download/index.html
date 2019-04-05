@@ -1,0 +1,856 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Documentation for Météo-France models on AWS">
+      
+      
+      
+        <meta name="author" content="OpenMeteoData">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.1">
+    
+    
+      
+        <title>Partial download - MF models on AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#partial-download" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="MF models on AWS" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              MF models on AWS
+            </span>
+            <span class="md-header-nav__topic">
+              Partial download
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/OpenMeteoData/meteo-france-models/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="MF models on AWS" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    MF models on AWS
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/OpenMeteoData/meteo-france-models/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Datasets
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Datasets
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../datasets/v2/" title="Cloud-ready − v2" class="md-nav__link">
+      Cloud-ready − v2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../datasets/v1/" title="Legacy − v1" class="md-nav__link">
+      Legacy − v1
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Models
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Models
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/arome-france-hd/" title="arome-france-hd" class="md-nav__link">
+      arome-france-hd
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/arome-france/" title="arome-france" class="md-nav__link">
+      arome-france
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/arpege-europe/" title="arpege-europe" class="md-nav__link">
+      arpege-europe
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/arpege-world/" title="arpege-world" class="md-nav__link">
+      arpege-world
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Parameters
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Parameters
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../parameters/" title="Full list" class="md-nav__link">
+      Full list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../open-licence/" title="Data licensing" class="md-nav__link">
+      Data licensing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Tools
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Partial download
+      </label>
+    
+    <a href="./" title="Partial download" class="md-nav__link md-nav__link--active">
+      Partial download
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-file" title="Inventory file" class="md-nav__link">
+    Inventory file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to" title="How to?" class="md-nav__link">
+    How to?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noaa-ready-to-use-method" title="NOAA ready-to-use method" class="md-nav__link">
+    NOAA ready-to-use method
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-filter" title="Example {FILTER}" class="md-nav__link">
+    Example {FILTER}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-method" title="Manual method" class="md-nav__link">
+    Manual method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-lambda" title="AWS Lambda" class="md-nav__link">
+    AWS Lambda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-content-of-inventory-files" title="Example content of inventory files" class="md-nav__link">
+    Example content of inventory files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../grib-to-geotiff/" title="GRIB2 to GeoTIFF" class="md-nav__link">
+      GRIB2 to GeoTIFF
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-file" title="Inventory file" class="md-nav__link">
+    Inventory file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to" title="How to?" class="md-nav__link">
+    How to?
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noaa-ready-to-use-method" title="NOAA ready-to-use method" class="md-nav__link">
+    NOAA ready-to-use method
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software" title="Software" class="md-nav__link">
+    Software
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage" title="Usage" class="md-nav__link">
+    Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-filter" title="Example {FILTER}" class="md-nav__link">
+    Example {FILTER}
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-method" title="Manual method" class="md-nav__link">
+    Manual method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-lambda" title="AWS Lambda" class="md-nav__link">
+    AWS Lambda
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-content-of-inventory-files" title="Example content of inventory files" class="md-nav__link">
+    Example content of inventory files
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OpenMeteoData/meteo-france-models/edit/master/docs/tools/partial-download.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="partial-download">Partial download</h1>
+<p>In the <code>Cloud-ready − v2</code> dataset, all vertical levels are concatenated in the same grib file.</p>
+<p>In the <code>Legacy − v1</code> dataset, multiple parameters, levels and timesteps are concatenated in the same grib file.</p>
+<p>Partial download permits do get only the parts of the GRIB file that you need.</p>
+<h2 id="inventory-file">Inventory file</h2>
+<p>Inventory file for each grib is needed in order to do partial download.</p>
+<p><strong>To get the inventory file, replace <code>.grib2</code> extension with <code>.inv</code> in the url.</strong></p>
+<p>A new inventory file needs to be downloaded for each GRIB file, even if it is the same parameter but a different run or timestep.</p>
+<p>See inventory files <a href="#example-content-of-inventory-files">examples</a>.</p>
+<h2 id="how-to">How to?</h2>
+<h3 id="noaa-ready-to-use-method">NOAA ready-to-use method</h3>
+<h4 id="software">Software</h4>
+<p>You need an environment that includes <code>perl</code>, <code>grep</code> and <code>curl</code>. That is already the case for most unix platforms.</p>
+<p>Download those two scripts from <a href="https://www.cpc.ncep.noaa.gov/products/wesley/fast_downloading_grib.html">NOAA CDC </a>:</p>
+<ul>
+<li><a href="ftp://ftp.cpc.ncep.noaa.gov/wd51we/fast_downloading_grib/get_inv.pl">get_inv.pl</a></li>
+<li><a href="ftp://ftp.cpc.ncep.noaa.gov/wd51we/fast_downloading_grib/get_grib.pl">get_grib.pl</a></li>
+</ul>
+<h4 id="usage">Usage</h4>
+<p><code>$ get_inv.pl {INV_URL} | grep {FILTER} | get_grib.pl {GRIB_URL} {OUTPUT}</code></p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{INV_URL}</td>
+<td>Url of the <code>.inv</code> file</td>
+</tr>
+<tr>
+<td>{FILTER}</td>
+<td>Grep filter for the parts you want <br><em>See below</em></td>
+</tr>
+<tr>
+<td>{GRIB_URL}</td>
+<td>Url of the <code>.grib2</code> file</td>
+</tr>
+<tr>
+<td>{OUTPUT}</td>
+<td>Path to the output <code>.grib2</code> file</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-filter">Example {FILTER}</h4>
+<ul>
+<li>at 2 meters AGL:<br>
+  <code>grep -e ':2 m above ground:'</code></li>
+<li>at 10 meters AGL:<br>
+  <code>grep -e ':10 m above ground:'</code></li>
+<li>at altitude 3000m:<br>
+  <code>grep -e ':3000 m above mean sea level:'</code></li>
+<li>at 700hPa:<br>
+  <code>grep -e ':700 mb:'</code></li>
+<li>at mean sea level:<br>
+  <code>grep -e ':mean sea level:'</code></li>
+<li>at surface:<br>
+  <code>grep -e ':surface:'</code></li>
+<li>all isobaric layers:<br>
+  <code>grep -e ':[0-9]* mb:'</code></li>
+</ul>
+<p>You can request multiple parts at once:<br></p>
+<pre><code>$ get_inv.pl {INV_URL} | \
+  grep \
+  -e ':surface:' \
+  -e ':2 m above ground:' \
+  -e ':700 mb:' \
+  -e ':[0-9]* m above mean sea level:
+  -e ... | \
+  get_grib.pl {GRIB_URL} {OUTPUT}
+</code></pre>
+
+<h3 id="manual-method">Manual method</h3>
+<p>TODO</p>
+<p><code>curl http://www.example.com/file.grib2 --range 0-50,100-150</code><br>
+<code>curl http://www.example.com/file.grib2 -H "Range: bytes=0-50, 100-150"</code></p>
+<h3 id="aws-lambda">AWS Lambda</h3>
+<p>TODO</p>
+<h2 id="example-content-of-inventory-files">Example content of inventory files</h2>
+<pre><code>TODO
+
+1:0:d=2018110900:PRES:20 m above ground:2 hour fcst:
+2:469093:d=2018110900:PRES:35 m above ground:2 hour fcst:
+3:938016:d=2018110900:PRES:50 m above ground:2 hour fcst:
+[...]
+24:10684016:d=2018110900:PRES:3000 m above ground:2 hour fcst:
+25:11177805:d=2018110900:PRES:mean sea level:2 hour fcst:
+26:11399136:d=2018110900:PRES:surface:2 hour fcst:
+
+1:0:d=2018110900:GP:125 mb:anl:
+
+</code></pre>
+
+<p>Inventory can be generated with the <a href="https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/">wgrib2</a> tool : <code>wgrib2 -s FILE.grib2 &gt; FILE.inv</code></p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../open-licence/" title="Data licensing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Data licensing
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../grib-to-geotiff/" title="GRIB2 to GeoTIFF" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                GRIB2 to GeoTIFF
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Documentation © 2019  <a href="https://openmeteodata.com" target="_blank">OpenMeteoData SAS</a> and contributors.</p> <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France.</p>
+
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b806dc00.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>
