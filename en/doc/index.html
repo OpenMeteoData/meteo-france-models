@@ -40,7 +40,7 @@
     
     
       
-        <title>MF models on AWS</title>
+        <title>Météo-France models on AWS</title>
       
     
     
@@ -107,7 +107,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="MF models on AWS" class="md-header-nav__button md-logo">
+        <a href="." title="Météo-France models on AWS" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -120,7 +120,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              MF models on AWS
+              Météo-France models on AWS
             </span>
             <span class="md-header-nav__topic">
               Home
@@ -197,12 +197,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="." title="MF models on AWS" class="md-nav__button md-logo">
+    <a href="." title="Météo-France models on AWS" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    MF models on AWS
+    Météo-France models on AWS
   </label>
   
     <div class="md-nav__source">
@@ -276,6 +276,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browse-the-datasets" title="📂 Browse the datasets" class="md-nav__link">
+    📂 Browse the datasets
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#cloud-ready-v2" title="Cloud-ready − v2" class="md-nav__link">
@@ -415,8 +422,8 @@
 
 
   <li class="md-nav__item">
-    <a href="models/arome-france-hd/" title="arome-france-hd" class="md-nav__link">
-      arome-france-hd
+    <a href="models/arome-france/" title="arome-france" class="md-nav__link">
+      arome-france
     </a>
   </li>
 
@@ -427,8 +434,8 @@
 
 
   <li class="md-nav__item">
-    <a href="models/arome-france/" title="arome-france" class="md-nav__link">
-      arome-france
+    <a href="models/arome-france-hd/" title="arome-france-hd" class="md-nav__link">
+      arome-france-hd
     </a>
   </li>
 
@@ -504,8 +511,20 @@
 
 
   <li class="md-nav__item">
-    <a href="open-licence/" title="Data licensing" class="md-nav__link">
+    <a href="license/" title="Data licensing" class="md-nav__link">
       Data licensing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="assistance/" title="Assistance" class="md-nav__link">
+      Assistance
     </a>
   </li>
 
@@ -517,13 +536,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Tools
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         Tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -597,6 +616,13 @@
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browse-the-datasets" title="📂 Browse the datasets" class="md-nav__link">
+    📂 Browse the datasets
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#cloud-ready-v2" title="Cloud-ready − v2" class="md-nav__link">
@@ -675,7 +701,7 @@
                 
                 <h2 id="introduction">Introduction</h2>
 <p>Welcome to the <strong>Météo-France models on AWS</strong> project.</p>
-<p>This project is brought to you by <a href="https://openmeteodata.com">OpenMeteoData SAS</a> and <a href="https://aws.amazon.com/opendata/public-datasets/">AWS Public Dataset Program</a>.</p>
+<p>This project is brought to you by <a href="https://openmeteodata.com">OpenMeteoData</a> and <a href="https://aws.amazon.com/opendata/public-datasets/">AWS Public Dataset Program</a>.</p>
 <p><strong>We serve Météo-France models data from high-performance and reliable <a href="https://aws.amazon.com/s3/">AWS S3</a> hosting service.</strong></p>
 <h2 id="models">Models</h2>
 <table>
@@ -690,18 +716,18 @@
 </thead>
 <tbody>
 <tr>
-<td><code>arome-france-hd</code></td>
-<td>AROME</td>
-<td>France + neighborhood</td>
-<td>0.01° (~1.5km)</td>
-<td><a href="models/arome-france-hd/">🔗 </a></td>
-</tr>
-<tr>
 <td><code>arome-france</code></td>
 <td>AROME</td>
 <td>France + neighborhood</td>
 <td>0.025° (~2.5km)</td>
 <td><a href="models/arome-france/">🔗 </a></td>
+</tr>
+<tr>
+<td><code>arome-france-hd</code></td>
+<td>AROME</td>
+<td>France + neighborhood</td>
+<td>0.01° (~1.5km)</td>
+<td><a href="models/arome-france-hd/">🔗 </a></td>
 </tr>
 <tr>
 <td><code>arpege-europe</code></td>
@@ -720,6 +746,7 @@
 </tbody>
 </table>
 <h2 id="available-datasets">Available datasets</h2>
+<h3 id="browse-the-datasets">📂 <a href="/">Browse the datasets</a></h3>
 <h3 id="cloud-ready-v2"><strong>Cloud-ready − v2</strong></h3>
 <ul>
 <li>Our improved version of the GRIB2 files from Météo-France</li>
@@ -745,8 +772,8 @@ This was a real breaktrough.</p>
 <p><strong>We do support MF efforts to make it's data public, and want to bring our help to disseminate and enable reuse of the data in an efficient and easy way.</strong></p>
 <p>That is why we developped this service enabling easy access to MF models data.</p>
 <h2 id="licence">Licence</h2>
-<p><strong>Both original and new data is Licensed under <a href="https://github.com/etalab/licence-ouverte/blob/master/open-licence.md">French Government Open Licence</a></strong></p>
-<p>Our work is based on open-data from Météo-France, but we are not affiliated or endorsed by Météo-France.</p>
+<p><strong>Both original and new data are Licensed under <a href="license/">French Government Open Licence</a></strong></p>
+<p>Our work is based on open-data from Météo-France, but we are not affiliated or endorsed by Météo-France by any way.</p>
 <h2 id="updates-notifications">Updates notifications</h2>
 <p>Our policy is to notify you in advance (when possible) in the case of any event that might affect your systems.</p>
 <p>News, updates and changes notices are published here:<br>
@@ -755,12 +782,11 @@ This was a real breaktrough.</p>
 <h2 id="availability-and-sla">Availability and SLA</h2>
 <p>We aim to provide a service with industry-grade reliability.</p>
 <p><strong>HOWEVER THIS SERVICE IS PROVIDED ON A BEST EFFORT BASIS WITHOUT ANY WARANTEE. IT MAY BE SUBJECT TO OUTAGES WITHOUT PRIOR NOTIFICATION.</strong></p>
-<p>Our systems are fully monitored with immediate email and SMS alert in case of a problem, and we have several people with full access to the infrastructure if something needs to be fixed urgently.
-The watch team includes Nicolas Baldeck (OpenMeteoData), Vaclav Hornik (Windguru), Christian Quest.</p>
+<p>Our systems are fully monitored with immediate email and SMS alert in case of a problem.</p>
 <p>We are still dependent on Meteo-France servers. So if Meteo-France servers go down, there is nothing we can do. However, you will also face this problem if you download the data directly from Meteo-France servers.</p>
-<p><strong>On request, we can provide commercial SLA</strong> (including access to premium Meteo-France servers). Pricing starts at €500 / month. Contact sales@openmeteodata.com for more informations.</p>
+<p><strong>On request, we can provide commercial SLA</strong> (including access to premium Meteo-France servers). Pricing starts at €500 / month. Email contact@openmeteodata.com for more informations.</p>
 <h2 id="contact">Contact</h2>
-<p>data@openmeteodata.com</p>
+<p>contact@openmeteodata.com</p>
                 
                   
                 

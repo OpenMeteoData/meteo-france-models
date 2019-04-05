@@ -40,7 +40,7 @@
     
     
       
-        <title>arpege-europe - MF models on AWS</title>
+        <title>arpege-europe - Météo-France models on AWS</title>
       
     
     
@@ -107,7 +107,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="MF models on AWS" class="md-header-nav__button md-logo">
+        <a href="../.." title="Météo-France models on AWS" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -120,7 +120,7 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              MF models on AWS
+              Météo-France models on AWS
             </span>
             <span class="md-header-nav__topic">
               arpege-europe
@@ -197,12 +197,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="MF models on AWS" class="md-nav__button md-logo">
+    <a href="../.." title="Météo-France models on AWS" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    MF models on AWS
+    Météo-France models on AWS
   </label>
   
     <div class="md-nav__source">
@@ -314,8 +314,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../arome-france-hd/" title="arome-france-hd" class="md-nav__link">
-      arome-france-hd
+    <a href="../arome-france/" title="arome-france" class="md-nav__link">
+      arome-france
     </a>
   </li>
 
@@ -326,8 +326,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../arome-france/" title="arome-france" class="md-nav__link">
-      arome-france
+    <a href="../arome-france-hd/" title="arome-france-hd" class="md-nav__link">
+      arome-france-hd
     </a>
   </li>
 
@@ -363,6 +363,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#browse-arpege-europe-dataset" title="📂 Browse arpege-europe dataset" class="md-nav__link">
+    📂 Browse arpege-europe dataset
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#coverage" title="Coverage" class="md-nav__link">
@@ -476,8 +483,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../open-licence/" title="Data licensing" class="md-nav__link">
+    <a href="../../license/" title="Data licensing" class="md-nav__link">
       Data licensing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../assistance/" title="Assistance" class="md-nav__link">
+      Assistance
     </a>
   </li>
 
@@ -489,13 +508,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
-    <label class="md-nav__link" for="nav-6">
+    <label class="md-nav__link" for="nav-7">
       Tools
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         Tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -549,6 +568,13 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#browse-arpege-europe-dataset" title="📂 Browse arpege-europe dataset" class="md-nav__link">
+    📂 Browse arpege-europe dataset
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#coverage" title="Coverage" class="md-nav__link">
@@ -613,11 +639,14 @@
                 
                 <h1 id="arpege-europe">arpege-europe</h1>
 <p><img alt="" src="../../img/domain-arpege-europe.jpg" /></p>
-<p>TODO: url to bucket</p>
+<h2 id="browse-arpege-europe-dataset">📂 <a href="/#arpege-europe/">Browse arpege-europe dataset</a></h2>
 <h2 id="coverage">Coverage</h2>
 <p>Europe at 0.1° (~11km) resolution</p>
 <h2 id="static-files">Static files</h2>
-<p>TODO</p>
+<ul>
+<li><a href="https://mf-nwp-models.s3.amazonaws.com/arpege-europe/static/terrain.grib2">Model terrain height</a></li>
+<li><a href="https://mf-nwp-models.s3.amazonaws.com/arpege-europe/static/landmask.grib2">Landmask</a></li>
+</ul>
 <h2 id="timesteps">Timesteps</h2>
 <ul>
 <li>0h → 11h: hourly</li>
@@ -656,7 +685,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../arome-france/" title="arome-france" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../arome-france-hd/" title="arome-france-hd" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -665,7 +694,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                arome-france
+                arome-france-hd
               </span>
             </div>
           </a>

@@ -22,7 +22,7 @@ permissions and limitations under the License.
     <title>Météo-France Models on AWS</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://aws.amazon.com/favicon.ico">
+    <!--<link rel="shortcut icon" href="https://aws.amazon.com/favicon.ico">-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" integrity="sha384-PmY9l28YgO4JwMKbTvgaS7XNZJ30MK9FAZjjzXtlqyZCqBY6X6bXIkM++IkyinN+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap-theme.min.css" integrity="sha384-jzngWsPS6op3fgRCDTESqrEJwRKck+CILhJVO5VvaAZCq8JYf8HsR/HPpBOOPZfR" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
@@ -99,9 +99,9 @@ permissions and limitations under the License.
                         <li><strong>http=</strong> https://mf-nwp-models.s3.amazonaws.com/</li>
                       </ul> -->
                       <ul class="list-inline">
-                        <li><a href="/doc" target="_blank">Documentation</a></li>
-                        <li><a href="/doc/license" target="_blank">License</a></li>
-                        <li><a href="/doc/assistance" target="_blank">Assistance</a></li>
+                        <li><a href="/en/doc" target="_blank">Documentation</a></li>
+                        <li><a href="/en/doc/license" target="_blank">License</a></li>
+                        <li><a href="/en/doc/assistance" target="_blank">Assistance</a></li>
                         <li><a href="https://github.com/OpenMeteoData/meteo-france-models/issues/1" target="_blank">Announcements</a></li>
                         <li><a href="http://status.mf-models-on-aws.org" target="_blank">Service status</a></li>
                       </ul>
@@ -636,77 +636,10 @@ permissions and limitations under the License.
         // If initial bucket has been hard-coded above then use it, else try to
         // derive the initial bucket from the document URL (useful if index.html was
         // launched directly from within a bucket), else prompt the user.
-        if (s3exp_config.Bucket) {
-            (s3exp_lister = s3list(s3exp_config, s3draw)).go();
-        } else if (parser.hostname.endsWith('amazonaws.com')) {
-            // Hostname is likely to be in one of the following forms:
-            // - s3.amazonaws.com
-            // - bucket1.s3.amazonaws.com
-            // - s3-us-west-2.amazonaws.com
-            // - bucket2.s3-us-west-2.amazonaws.com
-
-            // If using static website hosting, the hostname will be of the form:
-            // - bucket.s3-website.eu-central-1.amazonaws.com/
-
-            // The following is also a legal form, but we do not support it, so
-            // you should use s3-eu-central-1 rather than s3.eu-central-1:
-            // - bucket3.s3.eu-central-1.amazonaws.com
-
-            var bucket;
-            var region;
-            var hostnames = parser.hostname.split('.');
-            var pathnames = parser.pathname.split('/');
-
-            console.log("count of words in hostname=" + hostnames.length);
-            console.log("count of words in pathname=" + pathnames.length);
-
-            console.log("hostnames=" + hostnames);
-            console.log("pathnames=" + pathnames);
-
-            // If bucket prefix not included in hostname
-            if (hostnames[0].match(/^s3-/) || hostnames[0].match(/^s3$/)) {
-                bucket = pathnames[1];
-                region = hostnames[0];
-                console.log("path bucket=" + bucket);
-                console.log("path region=" + region);
-            } else {
-                bucket = hostnames[0];
-                region = hostnames[hostnames.length - 3];
-                console.log("host bucket=" + bucket);
-                console.log("host region=" + region);
-            }
-
-            // If we found statically-hosted website prefix or explicit region, for
-            // example s3-us-west-2, then get region else use the default of US Standard
-            if (region !== 's3') {
-                if (region.startsWith('s3-website-')) {
-                    AWS.config.region = region.substring(11);
-                } else if (region.startsWith('s3-') || region.startsWith('s3.')) {
-                    AWS.config.region = region.substring(3);
-                } else {
-                    AWS.config.region = region;
-                }
-            }
-
-            console.log("AWS region=" + AWS.config.region);
-            console.log("S3 bucket=" + bucket);
-
-            // Create and initialize S3 object
-            s3 = new AWS.S3();
-            s3exp_config = {
-                Bucket: bucket,
-                Delimiter: '/'
-            };
-
-            if (window.location.hash) {
-                console.log("Location hash=" + window.location.hash);
-                s3exp_config.Prefix = window.location.hash.substring(1);
-            }
-
-            // Do initial bucket list
-            (s3exp_lister = s3list(s3exp_config, s3draw)).go();
-        } else {
-            promptForBucketInput();
+        if (window.location.hash) {
+            console.log("Location hash=" + window.location.hash);
+            s3exp_config.Prefix = window.location.hash.substring(1);
         }
+        (s3exp_lister = s3list(s3exp_config, s3draw)).go();
     });
 </script>
