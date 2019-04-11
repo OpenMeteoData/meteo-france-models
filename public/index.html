@@ -555,14 +555,45 @@ permissions and limitations under the License.
         $('#tb-s3objects').DataTable().column(s3exp_columns.key).visible(false);
         console.log("jQuery version=" + $.fn.jquery);
 
+        function pad (str, max) {
+          str = str.toString();
+          return str.length < max ? pad("0" + str, max) : str;
+        }
+
+        function padKey (key) {
+          var path = key.split('/');
+          var name = path[path.length-1];
+          var matches = /((\d+)-)?(\d+)h\.grib2/.exec(name);
+          if (matches === null) {
+            return key;
+          } else if (matches.length === 3) {
+            var start = matches[2];
+            var stop = matches[3];
+            var original = `${start}-${stop}h`
+            var padded = `${pad(start, 3)}-${pad(stop, 3)}h`;
+            return key.replace(original, padded);
+          } else if (matches.length === 4) {
+            var start = matches[3];
+            var original = `${start}h`;
+            var padded = `${pad(start, 3)}h`;
+            return key.replace(original, padded);
+          } else {
+            return key;
+          }
+        }
+
         // Custom sort for the Key column so that folders appear before objects
         $.fn.dataTableExt.oSort['key-asc'] = function(a, b) {
+            a = padKey(a);
+            b = padKey(b);
             var x = (isfolder(a) ? "0-" + a : "1-" + a).toLowerCase();
             var y = (isfolder(b) ? "0-" + b : "1-" + b).toLowerCase();
             return ((x < y) ? -1 : ((x > y) ? 1 : 0));
         };
 
         $.fn.dataTableExt.oSort['key-desc'] = function(a, b) {
+            a = padKey(a);
+            b = padKey(b);
             var x = (isfolder(a) ? "1-" + a : "0-" + a).toLowerCase();
             var y = (isfolder(b) ? "1-" + b : "0-" + b).toLowerCase();
             return ((x < y) ? 1 : ((x > y) ? -1 : 0));
