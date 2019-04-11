@@ -81,6 +81,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://mf-models-on-aws.org/en/doc/tools/partial-download/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
