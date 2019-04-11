@@ -40,7 +40,7 @@
     
     
       
-        <title>Cloud-ready − v2 - Météo-France models on AWS</title>
+        <title>Cloud-ready data − v2 - Météo-France models on AWS <sup>beta</sup></title>
       
     
     
@@ -107,7 +107,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Météo-France models on AWS" class="md-header-nav__button md-logo">
+        <a href="../.." title="Météo-France models on AWS <sup>beta</sup>" class="md-header-nav__button md-logo">
           
             <i class="md-icon"></i>
           
@@ -120,10 +120,10 @@
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             <span class="md-header-nav__topic">
-              Météo-France models on AWS
+              Météo-France models on AWS <sup>beta</sup>
             </span>
             <span class="md-header-nav__topic">
-              Cloud-ready − v2
+              Cloud-ready data − v2
             </span>
           
         </div>
@@ -197,12 +197,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../.." title="Météo-France models on AWS" class="md-nav__button md-logo">
+    <a href="../.." title="Météo-France models on AWS <sup>beta</sup>" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
     </a>
-    Météo-France models on AWS
+    Météo-France models on AWS <sup>beta</sup>
   </label>
   
     <div class="md-nav__source">
@@ -243,26 +243,17 @@
       
       
 
-  
 
+  <li class="md-nav__item">
+    <a href="../v1/" title="Legacy data − v1" class="md-nav__link">
+      Legacy data − v1
+    </a>
+  </li>
 
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    
-    <label class="md-nav__link" for="nav-2">
-      Datasets
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
-        Datasets
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
+      
+      
+      
 
   
 
@@ -275,11 +266,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Cloud-ready − v2
+        Cloud-ready data − v2
       </label>
     
-    <a href="./" title="Cloud-ready − v2" class="md-nav__link md-nav__link--active">
-      Cloud-ready − v2
+    <a href="./" title="Cloud-ready data − v2" class="md-nav__link md-nav__link--active">
+      Cloud-ready data − v2
     </a>
     
       
@@ -293,6 +284,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#browse-the-datasets" title="📂 Browse the datasets" class="md-nav__link">
+    📂 Browse the datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#endpoints" title="Endpoints" class="md-nav__link">
     Endpoints
   </a>
@@ -300,15 +298,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#index-files-and-altitude-layers" title="Index files and Altitude layers" class="md-nav__link">
-    Index files and Altitude layers
+  <a href="#timestep-types" title="Timestep types" class="md-nav__link">
+    Timestep types
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notifications" title="Notifications" class="md-nav__link">
-    Notifications
+  <a href="#level-types" title="Level types" class="md-nav__link">
+    Level types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meteorological-parameters" title="Meteorological parameters" class="md-nav__link">
+    Meteorological parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-files-and-altitude-levels" title="Inventory files and Altitude levels" class="md-nav__link">
+    Inventory files and Altitude levels
   </a>
   
 </li>
@@ -323,21 +335,16 @@
     
   </li>
 
-        
-          
-          
-          
+    
+      
+      
+      
 
 
   <li class="md-nav__item">
-    <a href="../v1/" title="Legacy − v1" class="md-nav__link">
-      Legacy − v1
+    <a href="../../models/arome-france/" title="− arome-france" class="md-nav__link">
+      − arome-france
     </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -346,70 +353,10 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      Models
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Models
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../../models/arome-france/" title="arome-france" class="md-nav__link">
-      arome-france
+    <a href="../../models/arome-france-hd/" title="− arome-france-hd" class="md-nav__link">
+      − arome-france-hd
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../models/arome-france-hd/" title="arome-france-hd" class="md-nav__link">
-      arome-france-hd
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../models/arpege-europe/" title="arpege-europe" class="md-nav__link">
-      arpege-europe
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../models/arpege-world/" title="arpege-world" class="md-nav__link">
-      arpege-world
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
   </li>
 
     
@@ -418,34 +365,22 @@
       
 
 
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      Parameters
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        Parameters
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
   <li class="md-nav__item">
-    <a href="../../parameters/" title="Full list" class="md-nav__link">
-      Full list
+    <a href="../../models/arpege-europe/" title="− arpege-europe" class="md-nav__link">
+      − arpege-europe
     </a>
   </li>
 
-        
-      </ul>
-    </nav>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../models/arpege-world/" title="− arpege-world" class="md-nav__link">
+      − arpege-world
+    </a>
   </li>
 
     
@@ -478,15 +413,27 @@
       
 
 
+  <li class="md-nav__item">
+    <a href="../../archives/" title="Archives" class="md-nav__link">
+      Archives
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-11">
       Tools
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-11">
         Tools
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -500,18 +447,6 @@
   <li class="md-nav__item">
     <a href="../../tools/partial-download/" title="Partial download" class="md-nav__link">
       Partial download
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../tools/grib-to-geotiff/" title="GRIB2 to GeoTIFF" class="md-nav__link">
-      GRIB2 to GeoTIFF
     </a>
   </li>
 
@@ -542,6 +477,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#browse-the-datasets" title="📂 Browse the datasets" class="md-nav__link">
+    📂 Browse the datasets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#endpoints" title="Endpoints" class="md-nav__link">
     Endpoints
   </a>
@@ -549,15 +491,29 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#index-files-and-altitude-layers" title="Index files and Altitude layers" class="md-nav__link">
-    Index files and Altitude layers
+  <a href="#timestep-types" title="Timestep types" class="md-nav__link">
+    Timestep types
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#notifications" title="Notifications" class="md-nav__link">
-    Notifications
+  <a href="#level-types" title="Level types" class="md-nav__link">
+    Level types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#meteorological-parameters" title="Meteorological parameters" class="md-nav__link">
+    Meteorological parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inventory-files-and-altitude-levels" title="Inventory files and Altitude levels" class="md-nav__link">
+    Inventory files and Altitude levels
   </a>
   
 </li>
@@ -588,11 +544,12 @@
 <li>Fixed GRIB2 format errors</li>
 <li>Hosted on high-performance S3</li>
 </ul>
+<h3 id="browse-the-datasets">📂 <a href="/">Browse the datasets</a></h3>
 <h2 id="endpoints">Endpoints</h2>
 <p>From S3 client:<br>
-<code>s3://omd-nwp-{MODEL}/v2/{YYYYMMDD}/{HH}/{PARAMETER}/{TIMESTEP}.grib2</code></p>
+<code>s3://mf-models-on-aws/{MODEL}/v2/{YYYY-MM-DD}/{HH}/{PARAMETER}/{LEVEL_TYPE}/{TIMESTEP}.grib2</code></p>
 <p>Direct HTTP:<br>
-<code>https://omd-nwp-{MODEL}.s3.amazonaws.com/v2/{YYYYMMDD}/{HH}/{PARAMETER}/{TIMESTEP}.grib2</code></p>
+<code>https://mf-models-on-aws.s3.amazonaws.com/{MODEL}/v2/{YYYY-MM-DD}/{HH}/{PARAMETER}/{LEVEL_TYPE}/{TIMESTEP}.grib2</code></p>
 <table>
 <thead>
 <tr>
@@ -606,8 +563,8 @@
 <td><code>arpege-world</code> <a href="../../models/arpege-world">🔗 </a><br><code>arpege-europe</code> <a href="../../models/arpege-europe">🔗 </a><br><code>arome-france</code> <a href="../../models/arome-france">🔗 </a><br> <code>arome-france-hd</code> <a href="../../models/arome-france-hd">🔗 </a></td>
 </tr>
 <tr>
-<td>{YYYYMMDD}</td>
-<td>Year / month / day of the run <br>Ex: <code>20181231</code></td>
+<td>{YYYY-MM-DD}</td>
+<td>Year / month / day of the run <br>Ex: <code>2018-12-31</code></td>
 </tr>
 <tr>
 <td>{HH}</td>
@@ -615,27 +572,412 @@
 </tr>
 <tr>
 <td>{PARAMETER}</td>
-<td>Name of the meteorological parameter <br>Ex: <code>air_temperature</code> <br><em>Refer to <a href="../../parameters/">Parameters documentation</a></em></td>
+<td>Name of the meteorological parameter <br>Ex: <code>TMP</code>, <code>PRES</code>, <code>UGRD</code></td>
+</tr>
+<tr>
+<td>{LEVEL_TYPE}</td>
+<td>Type of the levels in the file <br><code>agl</code>, <code>isobaric</code>, <code>10m</code>, <code>2m</code>, <code>pv</code>, <code>atmosphere</code>, <code>surface</code> or <code>msl</code></td>
 </tr>
 <tr>
 <td>{TIMESTEP}</td>
-<td>Timestep of the data <br>Ex: <code>4h</code> <br><em>Refer to individual model documentation</em></td>
+<td>Timestep of the data <br>Ex: <code>4h</code>, <code>0-12h</code>, <code>acc_0-12h</code> <br><em>Refer to individual model documentation</em></td>
 </tr>
 </tbody>
 </table>
-<h2 id="index-files-and-altitude-layers">Index files and Altitude layers</h2>
-<p>To minimize the number of files, all altitudes layers are concatenated in a single GRIB2 file.</p>
-<p><em>The <code>air_temperature</code> file contains multiples altitude and isobaric levels.
-If you need only <code>2 meters</code> or <code>500hPa</code> temperature, you can:</em></p>
-<ul>
-<li><em>download the whole <code>air_temperature</code> GRIB, but that is inefficient</em></li>
-<li><em>or download only the interesting slices of the GRIB</em></li>
-</ul>
-<p>We provide inventory files that are needed to do partial download.</p>
+<h2 id="timestep-types">Timestep types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>(empty)</code></td>
+<td><code>0h</code></td>
+<td>Instantaneous value</td>
+</tr>
+<tr>
+<td><code>acc_</code></td>
+<td><code>acc_0-6h</code></td>
+<td>Accumulation over the 6 last hours</td>
+</tr>
+<tr>
+<td><code>ave_</code></td>
+<td><code>ave_0-6h</code></td>
+<td>Average over the 6 last hours</td>
+</tr>
+<tr>
+<td><code>min_</code></td>
+<td><code>min_0-6h</code></td>
+<td>Minimum value in the 6 last hours</td>
+</tr>
+<tr>
+<td><code>max_</code></td>
+<td><code>max_0-6h</code></td>
+<td>Maximum value in the 6 last hours</td>
+</tr>
+</tbody>
+</table>
+<h2 id="level-types">Level types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>agl</code></td>
+<td>Specified height level above ground (m)</td>
+</tr>
+<tr>
+<td><code>isobaric</code></td>
+<td>Isobaric surface (hPa)</td>
+</tr>
+<tr>
+<td><code>10m</code></td>
+<td>10m above ground level</td>
+</tr>
+<tr>
+<td><code>2m</code></td>
+<td>2m above ground level</td>
+</tr>
+<tr>
+<td><code>atmosphere</code></td>
+<td>Entire atmosphere</td>
+</tr>
+<tr>
+<td><code>surface</code></td>
+<td>Ground surface or also used for 2D data</td>
+</tr>
+<tr>
+<td><code>msl</code></td>
+<td>Mean sea level</td>
+</tr>
+<tr>
+<td><code>pv</code></td>
+<td>Potential vorticity surface (K m2 kg-1 s-1)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="meteorological-parameters">Meteorological parameters</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Content</th>
+<th>Units</th>
+<th>Acc. units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ABSV</td>
+<td>Absolute Vorticity</td>
+<td>s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>CAPE</td>
+<td>Convective Available Potential Energy</td>
+<td>J kg-1</td>
+<td></td>
+</tr>
+<tr>
+<td>CDCC</td>
+<td>Cloud Cover</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>CDCON</td>
+<td>Convective Cloud Cover</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>DLWRF</td>
+<td>Downward Long-Wave (Thermal) Radiation Flux</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>DLWRFCS</td>
+<td>Downward Long-Wave (Thermal) Radiation Flux, Clear Sky</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>DPT</td>
+<td>Dew Point Temperature</td>
+<td>K</td>
+<td></td>
+</tr>
+<tr>
+<td>DSWRF</td>
+<td>Downward Short-Wave (Solar) Radiation Flux</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>DSWRFCS</td>
+<td>Downward Short-Wave (Solar) Radiation Flux, Clear Sky</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>DZDT</td>
+<td>Vertical Velocity (Geometric)</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>EPOT</td>
+<td>Pseudo-Adiabatic Potential Temperature</td>
+<td>K</td>
+<td></td>
+</tr>
+<tr>
+<td>ETSS</td>
+<td>Eastward Turbulent Surface Stress</td>
+<td>N m-2</td>
+<td>N m-2 s</td>
+</tr>
+<tr>
+<td>EVARATE</td>
+<td>Evaporation Rate</td>
+<td>kg m-2 s-1</td>
+<td>kg m-2</td>
+</tr>
+<tr>
+<td>GP</td>
+<td>Geopotential</td>
+<td>m2 s-2</td>
+<td></td>
+</tr>
+<tr>
+<td>GPRATE</td>
+<td>Graupel (Snow Pellets) Prepitation Rate</td>
+<td>kg m-2 s-1</td>
+<td>kg m-2</td>
+</tr>
+<tr>
+<td>GUST</td>
+<td>Wind Speed (Gust)</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>HCDC</td>
+<td>High Cloud Cover</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>HPBL</td>
+<td>Planetary Boundary Layer Height</td>
+<td>m</td>
+<td></td>
+</tr>
+<tr>
+<td>LCDC</td>
+<td>Low Cloud Cover</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>LHTFL</td>
+<td>Latent Heat Net Flux</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>MCDC</td>
+<td>Medium Cloud Cover</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>NLWRF</td>
+<td>Net Long-Wave (Thermal) Radiation Flux</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>NSWRF</td>
+<td>Net Short-Wave (Solar) Radiation Flux</td>
+<td>W m-2</td>
+<td>J m-2</td>
+</tr>
+<tr>
+<td>NTSS</td>
+<td>Northward Turbulent Surface Stress</td>
+<td>N m-2</td>
+<td>N m-2 s</td>
+</tr>
+<tr>
+<td>PRES</td>
+<td>Pressure</td>
+<td>Pa</td>
+<td></td>
+</tr>
+<tr>
+<td>PVORT</td>
+<td>Potential Vorticity</td>
+<td>K m2 kg-1 s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>REFZR</td>
+<td>Equivalent radar reflectivity factor for rain</td>
+<td>m m6 m-3</td>
+<td></td>
+</tr>
+<tr>
+<td>RELV</td>
+<td>Relative Vorticity</td>
+<td>s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>RH</td>
+<td>Relative Humidity</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>SCLIWC</td>
+<td>Specific Cloud Ice Water Content</td>
+<td>kg kg-1</td>
+<td></td>
+</tr>
+<tr>
+<td>SHTFL</td>
+<td>Sensible Heat Net Flux</td>
+<td>W m-2</td>
+<td></td>
+</tr>
+<tr>
+<td>SKINT</td>
+<td>Skin Temperature</td>
+<td>K</td>
+<td></td>
+</tr>
+<tr>
+<td>SPFH</td>
+<td>Specific Humidity</td>
+<td>kg kg-1</td>
+<td></td>
+</tr>
+<tr>
+<td>SRAINW</td>
+<td>Specific Rain Water Content</td>
+<td>kg kg-1</td>
+<td></td>
+</tr>
+<tr>
+<td>SSNOWW</td>
+<td>Specific Snow Water Content</td>
+<td>kg kg-1</td>
+<td></td>
+</tr>
+<tr>
+<td>TCDC</td>
+<td>Total Cloud Cover</td>
+<td>%</td>
+<td></td>
+</tr>
+<tr>
+<td>TCWAT</td>
+<td>Total Column Water</td>
+<td>kg m-2</td>
+<td></td>
+</tr>
+<tr>
+<td>TKE</td>
+<td>Turbulent Kinetic Energy</td>
+<td>J kg-1</td>
+<td></td>
+</tr>
+<tr>
+<td>TMP</td>
+<td>Temperature</td>
+<td>K</td>
+<td></td>
+</tr>
+<tr>
+<td>TPRATE</td>
+<td>Total Precipitation Rate</td>
+<td>kg m-2 s-1</td>
+<td>kg m-2</td>
+</tr>
+<tr>
+<td>TSRWE</td>
+<td>Total Snowfall Rate Water Equivalent</td>
+<td>kg m-2 s-1</td>
+<td>kg m-2</td>
+</tr>
+<tr>
+<td>RPRATE</td>
+<td>Rain Precipitation Rate</td>
+<td>kg m-2</td>
+<td>kg m-2</td>
+</tr>
+<tr>
+<td>UGRD</td>
+<td>U-Component of Wind</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>UGUST</td>
+<td>U-Component of Wind (Gust)</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>VGRD</td>
+<td>V-Component of Wind</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>VGUST</td>
+<td>V-Component of Wind (Gust)</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>VVEL</td>
+<td>Vertical Velocity (Pressure)</td>
+<td>Pa s-1</td>
+<td></td>
+</tr>
+<tr>
+<td>WDIR</td>
+<td>Wind Direction (from which blowing)</td>
+<td>degrees from North</td>
+<td></td>
+</tr>
+<tr>
+<td>WIND</td>
+<td>Wind Speed</td>
+<td>m s-1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="inventory-files-and-altitude-levels">Inventory files and Altitude levels</h2>
+<p>To make the HTTP requests more efficient, multiple levels are merged in a same file.</p>
+<p><em>The <code>agl/TMP</code> file contains <code>1000m AGL</code>, <code>2000m AGL</code>...</em></p>
+<p><em>The <code>isobaric/TMP</code> file contains <code>800hPa</code>, <code>600hPa</code>...</em></p>
+<p>It is possible to do partial requests, to save bandwitdh and download only the levels you are interested in. We provide inventory files enabling you to do so.</p>
 <p>To get the inventory files, replace <code>.grib2</code> extension with <code>.inv</code> in the url.</p>
 <p>See <a href="/tools/partial-download">Partial download</a> for usage instructions.</p>
-<h2 id="notifications">Notifications</h2>
-<p>SNS Notification channel for new files: arn::TODO</p>
                 
                   
                 
@@ -656,7 +998,7 @@ If you need only <code>2 meters</code> or <code>500hPa</code> temperature, you 
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../v1/" title="Legacy data − v1" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -665,19 +1007,19 @@ If you need only <code>2 meters</code> or <code>500hPa</code> temperature, you 
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Home
+                Legacy data − v1
               </span>
             </div>
           </a>
         
         
-          <a href="../v1/" title="Legacy − v1" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../models/arome-france/" title="− arome-france" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Legacy − v1
+                − arome-france
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -693,7 +1035,7 @@ If you need only <code>2 meters</code> or <code>500hPa</code> temperature, you 
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Documentation © 2019  <a href="https://openmeteodata.com" target="_blank">OpenMeteoData SAS</a> and contributors.</p> <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France.</p>
+            Documentation © 2019  <a href="https://openmeteodata.com" target="_blank">OpenMeteoData SAS</a> and contributors.</p> <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France in any way.</p>
 
           </div>
         
