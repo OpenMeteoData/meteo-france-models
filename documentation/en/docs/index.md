@@ -4,7 +4,7 @@ Welcome to the **Météo-France models on AWS** project.
 
 This project is brought to you by [OpenMeteoData](https://openmeteodata.com) and [AWS Public Dataset Program](https://aws.amazon.com/opendata/public-datasets/).
 
-**We serve Météo-France models data from high-performance and reliable [AWS S3](https://aws.amazon.com/s3/) hosting service.**
+**We serve Météo-France models data from high-performance and reliable [Amazon AWS S3](https://aws.amazon.com/s3/) hosting service.**
 
 ## Models
 
@@ -19,7 +19,7 @@ This project is brought to you by [OpenMeteoData](https://openmeteodata.com) and
 
 ### 📂 [Browse the datasets](/)
 
-### **Cloud-ready − v2**
+### **Cloud-ready − v2** (recommended)
 
 * Our improved version of the GRIB2 files from Météo-France
 * Reorganised by timestep and parameter for easier use
@@ -46,7 +46,7 @@ This was a real breaktrough.
 
 Since then, the data is officialy disseminated through MF data portal <https://donneespubliques.meteofrance.fr/>
 
-Unfortunately, the official MF data portal is not keeping up with the load. Users are reporting issues getting the data in a timely and reliable manner. This prevents the use of MF data on a large scale. [See testimonials](issue-testimonials.md).
+Unfortunately, the official MF data portal is not keeping up with the load. Users are reporting issues gconsoleetting the data in a timely and reliable manner. This prevents the use of MF data on a large scale. [See testimonials](issue-testimonials.md).
 
 We do think that MF models data are high-quality and high-interests datasets.
 
@@ -64,10 +64,10 @@ Our work is based on open-data from Météo-France, but we are not affiliated or
 
 Our policy is to notify you in advance (when possible) in the case of any event that might affect your systems.
 
-News, updates and changes notices are published here:<br>
-[https://github.com/OpenMeteoData/meteo-france-models/issues/1](https://github.com/OpenMeteoData/meteo-france-models/issues/1)
+News, updates and changes notices are published on the <br>
+[mf-models-users newsletter](https://www.freelists.org/list/mf-models-users)
 
-We strongly recommend you to subscribe to this thread in order to receive notifications.
+We strongly recommend you to subscribe to this newsletter in order to receive notifications.
 
 ## Availability and SLA
 
@@ -79,7 +79,7 @@ Our systems are fully monitored with immediate email and SMS alert in case of a 
 
 We are still dependent on Meteo-France servers. So if Meteo-France servers go down, there is nothing we can do. However, you will also face this problem if you download the data directly from Meteo-France servers.
 
-**On request, we can provide commercial SLA** (including access to premium Meteo-France servers). Pricing starts at €500 / month. Email contact@openmeteodata.com for more informations.
+**On request, we can provide commercial SLA and timely access** to the data on request (using premium Meteo-France servers). Pricing starts at €500 / month. Email contact@openmeteodata.com for more informations.
 
 ## Contact
 

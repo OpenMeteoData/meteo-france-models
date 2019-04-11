@@ -1,4 +1,4 @@
-site_name: Météo-France models on AWS
+site_name: Météo-France models on AWS <sup>beta</sup>
 #site_url:
 repo_url: https://github.com/OpenMeteoData/meteo-france-models
 
@@ -7,7 +7,7 @@ site_author: OpenMeteoData
 copyright: >
   Documentation © 2019  <a href="https://openmeteodata.com" target="_blank">OpenMeteoData SAS</a> and contributors.</p>
   <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-  <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France.</p>
+  <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France in any way.</p>
 
 site_dir: ../../public/en/doc
 
@@ -16,18 +16,14 @@ theme:
 
 nav:
   - Home: index.md
-  - Datasets:
-    - Cloud-ready − v2: datasets/v2.md
-    - Legacy − v1: datasets/v1.md
-  - Models:
-    - arome-france: models/arome-france.md
-    - arome-france-hd: models/arome-france-hd.md
-    - arpege-europe: models/arpege-europe.md
-    - arpege-world: models/arpege-world.md
-  - Parameters:
-    - Full list: parameters/index.md
+  - Legacy data − v1: datasets/v1.md
+  - Cloud-ready data − v2: datasets/v2.md
+  - − arome-france: models/arome-france.md
+  - − arome-france-hd: models/arome-france-hd.md
+  - − arpege-europe: models/arpege-europe.md
+  - − arpege-world: models/arpege-world.md
   - Data licensing: license.md
   - Assistance: assistance.md
+  - Archives: archives.md
   - Tools:
     - Partial download: tools/partial-download.md
-    - GRIB2 to GeoTIFF: tools/grib-to-geotiff.md

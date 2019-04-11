@@ -18,9 +18,9 @@ See inventory files [examples](#example-content-of-inventory-files).
 
 ## How to?
 
-### NOAA ready-to-use method
+### With get_grib.pl
 
-#### Software
+#### Requirements
 
 You need an environment that includes `perl`, `grep` and `curl`. That is already the case for most unix platforms.
 
@@ -40,7 +40,11 @@ Download those two scripts from [NOAA CDC ](https://www.cpc.ncep.noaa.gov/produc
 | {GRIB_URL} | Url of the `.grib2` file           |
 | {OUTPUT}   | Path to the output `.grib2` file   |
 
-#### Example {FILTER}
+#### Examples of {FILTER} values
+* temperature:<br>
+  `grep -e ':TMP:'`
+* rain:<br>
+  `grep -e ':RPRATE:'`
 * at 2 meters AGL:<br>
   `grep -e ':2 m above ground:'`
 * at 10 meters AGL:<br>
@@ -68,31 +72,9 @@ $ get_inv.pl {INV_URL} | \
   get_grib.pl {GRIB_URL} {OUTPUT}
 ```
 
-### Manual method
-
-TODO
+## Manual method
 
 `curl http://www.example.com/file.grib2 --range 0-50,100-150`<br>
 `curl http://www.example.com/file.grib2 -H "Range: bytes=0-50, 100-150"`
 
-### AWS Lambda
-
-TODO
-
-## Example content of inventory files
-
-```
-TODO
-
-1:0:d=2018110900:PRES:20 m above ground:2 hour fcst:
-2:469093:d=2018110900:PRES:35 m above ground:2 hour fcst:
-3:938016:d=2018110900:PRES:50 m above ground:2 hour fcst:
-[...]
-24:10684016:d=2018110900:PRES:3000 m above ground:2 hour fcst:
-25:11177805:d=2018110900:PRES:mean sea level:2 hour fcst:
-26:11399136:d=2018110900:PRES:surface:2 hour fcst:
-
-1:0:d=2018110900:GP:125 mb:anl:
-
-```
-Inventory can be generated with the [wgrib2](https://www.cpc.ncep.noaa.gov/products/wesley/wgrib2/) tool : `wgrib2 -s FILE.grib2 > FILE.inv`
+...
