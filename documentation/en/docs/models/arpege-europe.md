@@ -25,10 +25,6 @@ Europe at 0.1° (~11km) resolution
 * Run 12: up to 114h
 * Run 18: up to 72h
 
-## Parameters
-
-TODO
-
 ## V1 dataset packages
 
 `00H12H`, `13H24H`, `25H36H`, `37H48H`, `49H60H`, `61H72H`, `73H84H`, `85H96H`, `97H102H`, `103H114H`

@@ -24,10 +24,6 @@ Global at 0.5° (~55km) resolution
 * Run 12: up to 114h
 * Run 18: up to 72h
 
-## Parameters
-
-TODO
-
 ## V1 dataset packages
 
 `00H24H`, `27H48H`, `51H72H`, `75H102H`, `105H114H`

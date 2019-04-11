@@ -21,10 +21,6 @@ Hourly data
 * Runs 00 & 12: up to 42h
 * Runs 06 & 18: up to 36h
 
-## Parameters
-
-TODO
-
 ## V1 dataset packages
 
 `00H06H`, `07H12H`, `13H18H`, `19H24H`, `25H30H`, `31H36H`, `37H42H`

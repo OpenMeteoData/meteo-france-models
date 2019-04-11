@@ -79,7 +79,7 @@ Our systems are fully monitored with immediate email and SMS alert in case of a 
 
 We are still dependent on Meteo-France servers. So if Meteo-France servers go down, there is nothing we can do. However, you will also face this problem if you download the data directly from Meteo-France servers.
 
-**On request, we can provide commercial SLA and timely access** to the data on request (using premium Meteo-France servers). Pricing starts at €500 / month. Email contact@openmeteodata.com for more informations.
+**On request, we can provide commercial SLA and timely access to the data** (using premium Meteo-France servers). Pricing starts at €500 / month. Email contact@openmeteodata.com for more informations.
 
 ## Contact
 
