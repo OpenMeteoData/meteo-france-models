@@ -1,57 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>None</loc>
+     <loc>https://mf-models-on-aws.org/en/doc/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://mf-models-on-aws.org/en/doc/datasets/v1/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://mf-models-on-aws.org/en/doc/datasets/v2/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://mf-models-on-aws.org/en/doc/models/arome-france/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://mf-models-on-aws.org/en/doc/models/arome-france-hd/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://mf-models-on-aws.org/en/doc/models/arpege-europe/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://mf-models-on-aws.org/en/doc/models/arpege-world/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://mf-models-on-aws.org/en/doc/license/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc>https://mf-models-on-aws.org/en/doc/assistance/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://mf-models-on-aws.org/en/doc/archives/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>None</loc>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://mf-models-on-aws.org/en/doc/tools/partial-download/</loc>
      <lastmod>2019-04-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
