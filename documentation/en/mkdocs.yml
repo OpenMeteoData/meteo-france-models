@@ -32,6 +32,7 @@ nav:
   - Announcements: https://www.freelists.org/list/mf-models-users
   - Issues tracker: https://github.com/openmeteodata/meteo-france-models/issues
   - Archives: archives.md
+  - Twitter: https://twitter.com/OpenMeteo/
   - '': '#'
   - Tools:
     - Partial download: tools/partial-download.md
