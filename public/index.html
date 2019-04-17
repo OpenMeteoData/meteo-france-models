@@ -542,7 +542,7 @@ permissions and limitations under the License.
                 "aTargets": [3],
                 "mData": "LastModified",
                 "mRender": function(data, type, full) {
-                    return data ? moment(data).local().format('YYYY-MM-DD HH:mm:ss') : "";
+                    return data ? moment(data).utc().format('YYYY-MM-DD HH:mm:ss UTC') : "";
                 }
             }, {
                 "aTargets": [4],
