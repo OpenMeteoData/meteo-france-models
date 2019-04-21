@@ -122,6 +122,7 @@ permissions and limitations under the License.
                                 <tr>
                                     <th>Object</th>
                                     <th>Folder</th>
+                                    <th>Description</th>
                                     <th>Last Modified</th>
                                     <th>Timestamp</th>
                                     <th>Size</th>
@@ -171,8 +172,9 @@ permissions and limitations under the License.
     var s3exp_columns = {
         key: 1,
         folder: 2,
-        date: 3,
-        size: 4
+        description: 3,
+        date: 4,
+        size: 5
     };
 
     AWS.config.region = 'us-east-1';
@@ -510,6 +512,135 @@ permissions and limitations under the License.
             return isfolder(data) ? "" : fullpath2pathname(data);
         }
 
+
+        function getParameterDetails(parameter) {
+            var details = {
+                ABSV: ["Absolute Vorticity", "s-1"],
+                BRTMP: ["Brightness Temperature", "K"],
+                CAPE: ["Convective Available Potential Energy", "J kg-1"],
+                CDCC: ["Cloud Cover", "%"],
+                CDCON: ["Convective Cloud Cover", "%"],
+                DLWRF: ["Downward Long-Wave (Thermal) Radiation Flux", "W m-2", "J m-2"],
+                DLWRFCS: ["Downward Long-Wave (Thermal) Radiation Flux, Clear Sky", "W m-2", "J m-2"],
+                DPT: ["Dew Point Temperature", "K"],
+                DSWRF: ["Downward Short-Wave (Solar) Radiation Flux", "W m-2", "J m-2"],
+                DSWRFCS: ["Downward Short-Wave (Solar) Radiation Flux, Clear Sky", "W m-2", "J m-2"],
+                DZDT: ["Vertical Velocity (Geometric)", "m s-1"],
+                EPOT: ["Pseudo-Adiabatic Potential Temperature", "K"],
+                ETSS: ["Eastward Turbulent Surface Stress", "N m-2", "N m-2 s"],
+                EVARATE: ["Evaporation Rate", "kg m-2 s-1", "kg m-2"],
+                GP: ["Geopotential", "m2 s-2"],
+                GPRATE: ["Graupel (Snow Pellets) Prepitation Rate", "kg m-2 s-1", "kg m-2"],
+                GUST: ["Wind Speed (Gust)", "m s-1"],
+                HCDC: ["High Cloud Cover", "%"],
+                HPBL: ["Planetary Boundary Layer Height", "m"],
+                LCDC: ["Low Cloud Cover", "%"],
+                LHTFL: ["Latent Heat Net Flux", "W m-2", "J m-2"],
+                MCDC: ["Medium Cloud Cover", "%"],
+                NLWRF: ["Net Long-Wave (Thermal) Radiation Flux", "W m-2", "J m-2"],
+                NSWRF: ["Net Short-Wave (Solar) Radiation Flux", "W m-2", "J m-2"],
+                NTSS: ["Northward Turbulent Surface Stress", "N m-2", "N m-2 s"],
+                PRES: ["Pressure", "Pa"],
+                PVORT: ["Potential Vorticity", "K m2 kg-1 s-1"],
+                REFZR: ["Equivalent radar reflectivity factor for rain", "m m6 m-3"],
+                RELV: ["Relative Vorticity", "s-1"],
+                RH: ["Relative Humidity", "%"],
+                SCLIWC: ["Specific Cloud Ice Water Content", "kg kg-1"],
+                SCLLWC: ["Specific Cloud Liquid Water Content", "kg kg-1"],
+                SHTFL: ["Sensible Heat Net Flux", "W m-2"],
+                SKINT: ["Skin Temperature", "K"],
+                SPFH: ["Specific Humidity", "kg kg-1"],
+                SRAINW: ["Specific Rain Water Content", "kg kg-1"],
+                SSNOWW: ["Specific Snow Water Content", "kg kg-1"],
+                TCDC: ["Total Cloud Cover", "%"],
+                TCWAT: ["Total Column Water", "kg m-2"],
+                TKE: ["Turbulent Kinetic Energy", "J kg-1"],
+                TMP: ["Temperature", "K"],
+                TPRATE: ["Total Precipitation Rate", "kg m-2 s-1", "kg m-2"],
+                TSRWE: ["Total Snowfall Rate Water Equivalent", "kg m-2 s-1", "kg m-2"],
+                RPRATE: ["Rain Precipitation Rate", "kg m-2", "kg m-2"],
+                UGRD: ["U-Component of Wind", "m s-1"],
+                UGUST: ["U-Component of Wind (Gust)", "m s-1"],
+                VGRD: ["V-Component of Wind", "m s-1"],
+                VGUST: ["V-Component of Wind (Gust)", "m s-1"],
+                VVEL: ["Vertical Velocity (Pressure)", "Pa s-1"],
+                WDIR: ["Wind Direction (from which blowing)", "degrees from North"],
+                WIND: ["Wind Speed", "m s-1"],
+                HP1: ["AGL data package 1", ""],
+                HP2: ["AGL data package 2", ""],
+                HP3: ["AGL data package 3", ""],
+                IP1: ["Isobaric data package 1", ""],
+                IP2: ["Isobaric data package 2", ""],
+                IP3: ["Isobaric data package 3", ""],
+                IP4: ["Isobaric data package 4", ""],
+                IP5: ["Isobaric data package 5", ""],
+                SP1: ["Surface data package 1", ""],
+                SP2: ["Surface data package 2", ""],
+                SP3: ["Surface data package 3", ""],
+            };
+            return details[parameter] ? details[parameter] : ["DESCRIPTION IS MISSING", ""];
+        }
+
+        function getLevelDescription(level) {
+            var description = {
+              agl: 	"at specified height above ground",
+              isobaric: 	"at isobaric surface",
+              "10m": 	"at 10m above ground level",
+              "2m": 	"at 2m above ground level",
+              atmosphere: 	"at entire atmosphere",
+              surface: 	"at ground surface / or 2D data",
+              msl: 	"at mean sea level",
+              pv: 	"at potential vorticity surface"
+            }
+            return description[level] ? description[level] : "DESCRIPTION IS MISSING";
+        }
+
+        function getFileDescription(file) {
+            if (/\.inv/.test(file)) {
+               return "<small><small>Inventory</small></small>"
+            } else if  (/^\d./.test(file)) {
+                return "Instantaneous"
+            } else if  (/acc_/.test(file)) {
+                return "Accumulation"
+            } else if  (/ave_/.test(file)) {
+                return "Average"
+            } else if  (/max_/.test(file)) {
+                return "Maximum"
+            } else if  (/max_/.test(file)) {
+                return "Minimum"
+            } else {
+                return "";
+            }
+        }
+
+        function renderDescription(data, type, full) {
+            switch (data) {
+                case "arome-france-hd/":
+                  return "<strong>France + neighborhood</strong> <a href=\"https://mf-models-on-aws.org/en/doc/models/arome-france-hd/\" target=\"_blank\">(doc)</a><br>0.01° (~1.5km) resolution";
+                case "arome-france/":
+                  return "<strong>France + neighborhood</strong> <a href=\"https://mf-models-on-aws.org/en/doc/models/arome-france/\" target=\"_blank\">(doc)</a><br>0.025° (~2.5km) resolution";
+                case "arpege-europe/":
+                  return "<strong>Europe</strong> <a href=\"https://mf-models-on-aws.org/en/doc/models/arpege-europe/\" target=\"_blank\">(doc)</a><br>0.1° (~11km) resolution";
+                case "arpege-world/":
+                  return "<strong>Global</strong> <a href=\"https://mf-models-on-aws.org/en/doc/models/arpege-world/\" target=\"_blank\">(doc)</a><br>0.5° (~55km) resolution";
+            }
+            if (/static\/$/.test(data)) return "Time-invariant fields";
+            if (/v1\/$/.test(data)) return "Original files from MF";
+            if (/v2\/$/.test(data)) return "Improved files";
+            var splitKey = data.split("/");
+            if (splitKey.length == 6 && splitKey[5] == "") {
+                var parameter = splitKey[4];
+                var details = getParameterDetails(parameter);
+                return details[0];
+            } else if (splitKey[1] == 'v2' && splitKey.length == 7 && splitKey[6] == "") {
+                return getLevelDescription(splitKey[5]);
+            } else if (splitKey[1] == 'v2' && splitKey.length == 7 && splitKey[6] != "") {
+                return getFileDescription(splitKey[6]);
+            } else {
+               return "";
+            }
+        }
+
         // Initial DataTable settings
         $('#tb-s3objects').DataTable({
             paging: false,
@@ -534,18 +665,24 @@ permissions and limitations under the License.
                 }
             }, {
                 "aTargets": [2],
-                "mData": "LastModified",
+                "mData": "Key",
                 "mRender": function(data, type, full) {
-                    return data ? moment(data).fromNow() : "";
+                    return renderDescription(data);
                 }
             }, {
                 "aTargets": [3],
                 "mData": "LastModified",
                 "mRender": function(data, type, full) {
-                    return data ? moment(data).utc().format('YYYY-MM-DD HH:mm:ss UTC') : "";
+                    return data ? moment(data).fromNow() : "";
                 }
             }, {
                 "aTargets": [4],
+                "mData": "LastModified",
+                "mRender": function(data, type, full) {
+                    return data ? moment(data).utc().format('YYYY-MM-DD HH:mm:ss UTC') : "";
+                }
+            }, {
+                "aTargets": [5],
                 "mData": function(source, type, val) {
                     return source.Size ? ((type == 'display') ? bytesToSize(source.Size) : source.Size) : "";
                 }
