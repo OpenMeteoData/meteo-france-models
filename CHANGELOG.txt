@@ -1,3 +1,8 @@
+* 2022-01-12: breaking change in the files served by Meteo-France. See https://github.com/OpenMeteoData/meteo-france-models/issues/8 
+v2 files will be temporary unavailable
+
+* 2019-04-24: A database issue caused troubles downloading the files from Meteo-France servers. The system has been updated and is now back to normal.
+
 * 2019-04-17: Updated the index page to display files timestamp in UTC
 
 * 2019-04-15: Fixed a bug that caused troubles for uploading files on April 14th.
