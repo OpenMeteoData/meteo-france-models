@@ -1,10 +1,10 @@
 # Partial download
 
-In the `Cloud-ready − v2` dataset, all vertical levels are concatenated in the same grib file.
-
 In the `Legacy − v1` dataset, multiple parameters, levels and timesteps are concatenated in the same grib file.
 
 Partial download permits do get only the parts of the GRIB file that you need.
+
+**Due to limitations of AWS S3 technology, you can only use partial download to download a single variable/parameter/timestep at a time**
 
 ## Inventory file
 

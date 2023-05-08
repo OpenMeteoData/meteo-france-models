@@ -1,4 +1,4 @@
-site_name: Météo-France models on AWS ᴮᴱᵀᴬ
+site_name: Météo-France models on AWS
 
 site_url: https://mf-models-on-aws.org/en/doc
 repo_url: https://github.com/OpenMeteoData/meteo-france-models
@@ -7,9 +7,9 @@ edit_uri: https://github.com/OpenMeteoData/meteo-france-models/edit/master/docum
 site_description: Documentation for Météo-France atmospheric models opendata on AWS
 site_author: OpenMeteoData
 copyright: >
-  Documentation © 2019  <a href="https://openmeteodata.com" target="_blank">OpenMeteoData SAS</a> and contributors.</p>
+  Documentation © 2019-2023  <a href="https://openmeteodata.com" target="_blank">Nicolas Baldeck</a> and contributors.</p>
   <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
-  <p>Our work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France in any way.</p>
+  <p>This work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France in any way.</p>
 
 site_dir: ../../public/en/doc
 
@@ -19,20 +19,15 @@ theme:
 nav:
   - Home: index.md
   - '': '#'
-  - Legacy files - v1: datasets/v1.md
-  - Cloud-ready files - v2: datasets/v2.md
-  - '': '#'
+  - Data packages - v1: datasets/v1.md
   - arome-france: models/arome-france.md
   - arome-france-hd: models/arome-france-hd.md
   - arpege-europe: models/arpege-europe.md
   - arpege-world: models/arpege-world.md
   - '': '#'
   - Data license: license.md
-  - Assistance: assistance.md
   - Announcements: https://www.freelists.org/list/mf-models-users
   - Issues tracker: https://github.com/openmeteodata/meteo-france-models/issues
-  - Archives: archives.md
-  - Twitter: https://twitter.com/OpenMeteo/
   - '': '#'
   - Tools:
     - Partial download: tools/partial-download.md
