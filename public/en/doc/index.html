@@ -1,0 +1,808 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Météo-France atmospheric models opendata on AWS">
+      
+      
+      
+        <meta name="author" content="OpenMeteoData">
+      
+      
+        <link rel="canonical" href="https://mf-models-on-aws.org/en/doc/">
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Météo-France models on AWS</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Météo-France models on AWS" class="md-header__button md-logo" aria-label="Météo-France models on AWS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Météo-France models on AWS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/OpenMeteoData/meteo-france-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Météo-France models on AWS" class="md-nav__button md-logo" aria-label="Météo-France models on AWS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Météo-France models on AWS
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/OpenMeteoData/meteo-france-models" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-datasets" class="md-nav__link">
+    Available datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Available datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browse-the-datasets" class="md-nav__link">
+    📂 Browse the datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-files-v1" class="md-nav__link">
+    Original files − v1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    Why
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    Licence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-notifications" class="md-nav__link">
+    Updates notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-and-sla" class="md-nav__link">
+    Availability and SLA
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="datasets/v1/" class="md-nav__link">
+        Data packages - v1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/arome-france/" class="md-nav__link">
+        arome-france
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/arome-france-hd/" class="md-nav__link">
+        arome-france-hd
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/arpege-europe/" class="md-nav__link">
+        arpege-europe
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="models/arpege-world/" class="md-nav__link">
+        arpege-world
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="license/" class="md-nav__link">
+        Data license
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.freelists.org/list/mf-models-users" class="md-nav__link">
+        Announcements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/openmeteodata/meteo-france-models/issues" class="md-nav__link">
+        Issues tracker
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="#" class="md-nav__link">
+        
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_13" type="checkbox" id="__nav_13" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_13">
+          Tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_13">
+          <span class="md-nav__icon md-icon"></span>
+          Tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tools/partial-download/" class="md-nav__link">
+        Partial download
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-datasets" class="md-nav__link">
+    Available datasets
+  </a>
+  
+    <nav class="md-nav" aria-label="Available datasets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#browse-the-datasets" class="md-nav__link">
+    📂 Browse the datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#original-files-v1" class="md-nav__link">
+    Original files − v1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why" class="md-nav__link">
+    Why
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licence" class="md-nav__link">
+    Licence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updates-notifications" class="md-nav__link">
+    Updates notifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-and-sla" class="md-nav__link">
+    Availability and SLA
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/OpenMeteoData/meteo-france-models/edit/master/documentation/en/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h2 id="introduction">Introduction</h2>
+<p>Welcome to the <strong>Météo-France models on AWS</strong> project.</p>
+<p>This project is brought to you by Nicolas Baldeck and the <a href="https://aws.amazon.com/opendata/public-datasets/">AWS Public Dataset Program</a>.</p>
+<p><strong>I serve Météo-France models data from high-performance and reliable <a href="https://aws.amazon.com/s3/">Amazon AWS S3</a> hosting service.</strong></p>
+<div style="color: darkred; border: 5px red solid; padding: 10px;">
+
+<h1>Deprecation notice!</h1>
+
+<p><strong>This service will be permanently shut down on December 9, 2024.</strong></p>
+
+<p>For years, I have advocated for Météo-France data to be hosted on the <a href="https://data.gouv.fr" target="_blank">data.gouv.fr</a> platform rather than internally.</p>
+
+<p>Under my initiative, Météo-France and data.gouv.fr joined forces. Their collaboration resulted in the creation of the meteo.data.gouv.fr platform.</p>
+
+<p><strong>You must now go to <a href="https://meteo.data.gouv.fr" target="_blank">meteo.data.gouv.fr</a> to download the data.</strong></p>
+
+<p>The files are not exactly the same, so you may need to make some technical adjustments. Don't delay your migration.</p>
+
+<p>My service was a temporary solution to relieve Météo-France's internal infrastructure. Therefore, it is no longer necessary.</p>
+</div>
+<h2 id="models">Models</h2>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Coverage</th>
+<th>Grid</th>
+<th>Doc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arome-france</code></td>
+<td>AROME</td>
+<td>France + neighborhood</td>
+<td>0.025° (~2.5km)</td>
+<td><a href="models/arome-france/">🔗 </a></td>
+</tr>
+<tr>
+<td><code>arome-france-hd</code></td>
+<td>AROME</td>
+<td>France + neighborhood</td>
+<td>0.01° (~1.5km)</td>
+<td><a href="models/arome-france-hd/">🔗 </a></td>
+</tr>
+<tr>
+<td><code>arpege-europe</code></td>
+<td>ARPEGE</td>
+<td>Europe</td>
+<td>0.1° (~11km)</td>
+<td><a href="models/arpege-europe/">🔗 </a></td>
+</tr>
+<tr>
+<td><code>arpege-world</code></td>
+<td>ARPEGE</td>
+<td>Global</td>
+<td>0.5° (~55km)</td>
+<td><a href="models/arpege-world/">🔗 </a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="available-datasets">Available datasets</h2>
+<h3 id="browse-the-datasets">📂 <a href="/">Browse the datasets</a></h3>
+<h3 id="original-files-v1">Original files − v1</h3>
+<ul>
+<li>The original untouched files from Météo-France servers</li>
+<li>Downloaded with high-speed and redundant servers network</li>
+<li>Checked for completness and corruption</li>
+<li>Hosted on high-performance S3</li>
+</ul>
+<p><a href="datasets/v1/">See documentation for v1</a></p>
+<h2 id="why">Why</h2>
+<p>In July of 2015, Météo-France (MF) did open access to a part of it's Numerical Weather Prediction (NWP) models data.
+This was a real breaktrough.</p>
+<p>Since then, the data is officialy disseminated through MF data portal <a href="https://donneespubliques.meteofrance.fr/">https://donneespubliques.meteofrance.fr/</a></p>
+<p>Unfortunately, the official MF data portal is not keeping up with the load. Users are reporting issues gconsoleetting the data in a timely and reliable manner. This prevents the use of MF data on a large scale. <a href="issue-testimonials/">See testimonials</a>.</p>
+<p>I do think that MF models data are high-quality and high-interests datasets.</p>
+<p><strong>I do support MF efforts to make it's data public, and want to bring our help to disseminate and enable reuse of the data in an efficient and easy way.</strong></p>
+<p>That is why I developped this service enabling easy access to MF models data.</p>
+<h2 id="licence">Licence</h2>
+<p><strong>Both original and new data are Licensed under <a href="license/">French Government Open Licence</a></strong></p>
+<p>This work is based on open-data from Météo-France, but I am not affiliated or endorsed by Météo-France by any way.</p>
+<h2 id="updates-notifications">Updates notifications</h2>
+<p>As far as possible, my policy is to notify you in advance in the case of any event that might affect your systems.</p>
+<p>News, updates and changes notices are published on the <br>
+<a href="https://www.freelists.org/list/mf-models-users">mf-models-users newsletter</a></p>
+<p><strong>I strongly recommend you to subscribe to this newsletter in order to receive notifications.</strong></p>
+<h2 id="availability-and-sla">Availability and SLA</h2>
+<p>I aim to provide a service with industry-grade reliability.</p>
+<p><strong>HOWEVER THIS SERVICE IS THE PERSONNAL PROJECT OF A SINGLE INDIVIDUAL, PROVIDED ON A BEST EFFORT BASIS WITHOUT ANY WARANTEE. IT MAY BE SUBJECT TO OUTAGES WITHOUT PRIOR NOTIFICATION.</strong></p>
+<p>My systems are fully monitored with immediate email and SMS alert in case of a problem.</p>
+<p>I am still dependent on Meteo-France servers. So if Meteo-France servers go down, there is nothing I can do. However, you will also face this problem if you download the data directly from Meteo-France servers.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="datasets/v1/" class="md-footer__link md-footer__link--next" aria-label="Next: Data packages - v1" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data packages - v1
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Documentation © 2019-2023  <a href="https://openmeteodata.com" target="_blank">Nicolas Baldeck</a> and contributors.</p> <p>This documentation is licensed under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p> <p>This work is based on open-data from Météo-France, but it is not affiliated or endorsed by Météo-France in any way.</p>
+
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.fcfe8b6d.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.b1047164.min.js"></script>
+      
+    
+  </body>
+</html>
