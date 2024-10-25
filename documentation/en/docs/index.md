@@ -6,6 +6,22 @@ This project is brought to you by Nicolas Baldeck and the [AWS Public Dataset Pr
 
 **I serve Météo-France models data from high-performance and reliable [Amazon AWS S3](https://aws.amazon.com/s3/) hosting service.**
 
+<div style="color: darkred; border: 5px red solid; padding: 10px;">
+
+<h1>Deprecation notice!</h1>
+                    	
+<p><strong>This service will be permanently shut down on December 9, 2024.</strong></p>
+
+<p>For years, I have advocated for Météo-France data to be hosted on the <a href="https://data.gouv.fr" target="_blank">data.gouv.fr</a> platform rather than internally.</p>
+
+<p>Under my initiative, Météo-France and data.gouv.fr joined forces. Their collaboration resulted in the creation of the meteo.data.gouv.fr platform.</p>
+
+<p><strong>You must now go to <a href="https://meteo.data.gouv.fr" target="_blank">meteo.data.gouv.fr</a> to download the data.</strong></p>
+
+<p>The files are not exactly the same, so you may need to make some technical adjustments. Don't delay your migration.</p>
+
+<p>My service was a temporary solution to relieve Météo-France's internal infrastructure. Therefore, it is no longer necessary.</p>
+</div>
 ## Models
 
 | Id | Name | Coverage | Grid | Doc |
